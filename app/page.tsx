@@ -1,7 +1,13 @@
+import { Footer, Navbar } from "./components";
+
 export default function Home() {
   return (
-    <main className="font-sans">
-      <h1>Mayou</h1>
-    </main>
+    <>
+      <Navbar />
+      <main className="px-20">
+        <h1>Main Content</h1>
+      </main>
+      <Footer />
+    </>
   );
 }
