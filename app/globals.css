@@ -7,3 +7,7 @@ html,
 body {
   height: 100%;
 }
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(37, 37, 37, 1);
+}

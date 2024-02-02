@@ -13,13 +13,11 @@ const config: Config = {
       "clr-scndry": "rgba(156, 156, 156, 1)",
       "clr-accent-100": "rgba(37, 37, 37, 1)",
       "clr-accent-200": "rgba(22, 22, 22, 1)",
-      "clr-accent-300": "rgba(21, 21, 21, 0.98)",
+      "clr-accent-300": "rgba(21, 21, 21, 1)",
       "clr-accent-400": "rgba(13, 13, 13, 1)",
-    },
-    fontSize: {
-      xs: "0.625",
-      base: ".875rem",
-      xl: "4rem",
+      "clr-accent-500": "rgba(13, 13, 13, .8)",
+      "clr-accent-600": "rgba(26, 26, 26, 1)",
+      "clr-accent-700": "rgba(31, 31, 31, 1)",
     },
     fontFamily: {
       sans: ["var(--font-satoshi)"],
