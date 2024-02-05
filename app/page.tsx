@@ -3,10 +3,10 @@
 import { Button, Footer, Lens, Navbar, NerdAlert } from "./components";
 import { motion } from "framer-motion";
 import { useBlindCtx } from "@/utils/BlindContext";
-import { useState } from "react";
+import { headlineVariants } from "@/utils/animation";
 
 export default function Home() {
-  const { isBlind, setIsBlind } = useBlindCtx();
+  const { isBlind } = useBlindCtx();
 
   return (
     <motion.main
@@ -15,12 +15,6 @@ export default function Home() {
     >
       <Lens>
         <NerdAlert />
-        {/* <Button
-          onClick={() => setIsBlind((p) => !p)}
-          className="px-24"
-        >
-          Get Found
-        </Button> */}
       </Lens>
       <article className="col-span-full row-span-full flex flex-col h-full">
         <Navbar />
@@ -31,12 +25,15 @@ export default function Home() {
           <article className="px-20 col-span-full row-span-full flex items-center justify-center">
             <span className="flex flex-col gap-[2.75rem]">
               <div className="text-center">
-                <h1 className="text-[4rem] text-clr-scndry leading-tight">
+                <motion.h1
+                  variants={headlineVariants}
+                  className="text-[4rem] text-clr-scndry leading-[1.5]"
+                >
                   You Got Lost!
-                </h1>
+                </motion.h1>
                 <p className="text-[.875rem] font-bold">
-                  Always keep your lens in hand. Mind your lenses, sharpen your
-                  senses.
+                  Always keep your lens in hand... Mind your lenses, sharpen
+                  your senses.
                 </p>
               </div>
               <div className="flex flex-col items-center gap-[.5rem]">

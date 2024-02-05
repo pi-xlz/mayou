@@ -18,7 +18,7 @@ const config: Config = {
       "clr-accent-500": "rgba(13, 13, 13, .8)",
       "clr-accent-600": "rgba(26, 26, 26, 1)",
       "clr-accent-700": "rgba(31, 31, 31, 1)",
-      "clr-accent-800": "rgba(23, 23, 23, 1)",
+      "clr-accent-800": "rgba(24, 24, 24, 1)",
     },
     fontFamily: {
       sans: ["var(--font-satoshi)"],
