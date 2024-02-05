@@ -1,16 +1,17 @@
 import { useBlindCtx } from "@/utils/BlindContext";
 
-const nerdAdvice = [
-  "Looks like we've got another nerd....",
+export const nerdAdvice = [
+  "Go home!!....",
   "Hmmm...Touch grass?",
   "Uhhh, what are you doing?",
   "That's it you're outta here.....",
+  "Did you know......that you could do better? \u{1F913}",
 ];
 
 const Footer = () => {
   const { setIsBlind, setNerdTips } = useBlindCtx();
   const handleNerd = () => {
-    const rndNo = Math.floor(Math.random() * 4);
+    const rndNo = Math.floor(Math.random() * 5);
     setNerdTips(nerdAdvice[rndNo]);
     setIsBlind(true);
   };

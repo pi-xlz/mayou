@@ -3,14 +3,7 @@ import { Button } from ".";
 import { motion } from "framer-motion";
 import { nerdAlertVariants } from "@/utils/animation";
 import { useBlindCtx } from "@/utils/BlindContext";
-
-const nerdAdvice = [
-  "Go home!!....",
-  "Hmmm...Touch grass?",
-  "Uhhh, what are you doing?",
-  "That's it you're outta here.....",
-  "Did you know......that you could do better? \u{1F913}",
-];
+import { nerdAdvice } from "./footer";
 
 const NerdAlert = () => {
   const { setIsBlind, nerdTips } = useBlindCtx();
@@ -28,7 +21,7 @@ const NerdAlert = () => {
       </div>
       <Button
         onClick={() => {
-          if (nerdTips === nerdAdvice[4])
+          if (nerdTips === nerdAdvice[3])
             window.open("https://www.youtube.com/shorts/dMObcjEI50w");
           setIsBlind(false);
         }}
