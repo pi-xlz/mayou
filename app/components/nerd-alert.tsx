@@ -9,6 +9,7 @@ const nerdAdvice = [
   "Hmmm...Touch grass?",
   "Uhhh, what are you doing?",
   "That's it you're outta here.....",
+  "Did you know......that you could do better? \u{1F913}",
 ];
 
 const NerdAlert = () => {
@@ -27,7 +28,7 @@ const NerdAlert = () => {
       </div>
       <Button
         onClick={() => {
-          if (nerdTips === nerdAdvice[3])
+          if (nerdTips === nerdAdvice[4])
             window.open("https://www.youtube.com/shorts/dMObcjEI50w");
           setIsBlind(false);
         }}
