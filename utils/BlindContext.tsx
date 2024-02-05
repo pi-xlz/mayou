@@ -6,6 +6,8 @@ import type { PropsWithChildren } from "react";
 type Blind = {
   isBlind: boolean;
   setIsBlind: (arg: React.SetStateAction<boolean>) => void;
+  nerdTips: string;
+  setNerdTips: (arg: React.SetStateAction<string>) => void;
 };
 
 const BlindContext = createContext<Blind | null>(null);
@@ -20,9 +22,14 @@ type ProviderProps = PropsWithChildren;
 
 const BlindContextProvider = ({ children }: ProviderProps) => {
   const [isBlind, setIsBlind] = useState(true);
+  const [nerdTips, setNerdTips] = useState(
+    "Looks like we've got another nerd...."
+  );
 
   return (
-    <BlindContext.Provider value={{ isBlind, setIsBlind }}>
+    <BlindContext.Provider
+      value={{ isBlind, setIsBlind, nerdTips, setNerdTips }}
+    >
       {children}
     </BlindContext.Provider>
   );

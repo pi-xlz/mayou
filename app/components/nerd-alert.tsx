@@ -3,9 +3,19 @@ import { Button } from ".";
 import { motion } from "framer-motion";
 import { nerdAlertVariants } from "@/utils/animation";
 import { useBlindCtx } from "@/utils/BlindContext";
+import { useRouter } from "next/navigation";
+
+const nerdAdvice = [
+  "Looks like we've got another nerd....",
+  "Hmmm...Touch grass?",
+  "Uhhh, what are you doing?",
+  "That's it you're outta here.....",
+];
 
 const NerdAlert = () => {
-  const { setIsBlind } = useBlindCtx();
+  const { setIsBlind, nerdTips } = useBlindCtx();
+  const router = useRouter();
+
   return (
     <motion.div
       variants={nerdAlertVariants}
@@ -15,10 +25,14 @@ const NerdAlert = () => {
         <div>
           <NerdIcon />
         </div>
-        <p>Looks like we&apos;ve got another nerd...</p>
+        <p>{nerdTips}</p>
       </div>
       <Button
-        onClick={() => setIsBlind(false)}
+        onClick={() => {
+          if (nerdTips === nerdAdvice[3])
+            window.open("https://www.youtube.com/shorts/dMObcjEI50w");
+          setIsBlind(false);
+        }}
         className="text-clr-scndry font-normal text-sm px-[1.375rem] py-[0.625rem] bg-base rounded-[0.625rem] border border-clr-accent-100 hover:bg-clr-accent-600 transition active:scale-95"
       >
         Use Lens

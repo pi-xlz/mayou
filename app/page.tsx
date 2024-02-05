@@ -38,7 +38,9 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center gap-[.5rem]">
                 <span className="text-[0.625rem]">Be on your way now.</span>
-                <Button className="px-24">Get Found</Button>
+                <a href="https://later.com/social-media-glossary/touch-grass/#:~:text=What%20does%20it%20mean%20when,in%20virtual%20or%20digital%20environments.">
+                  <Button className="px-24">Get Found</Button>
+                </a>
               </div>
             </span>
           </article>
