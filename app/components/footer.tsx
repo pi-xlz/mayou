@@ -13,12 +13,13 @@ const Footer = () => {
       <span className="text-[0.75rem] font-cursive">
         dnd by{" "}
         <span className="text-clr-prmry">
-          <a href="#">px</a>
+          <a
+            target="_blank"
+            href="https://github.com/pi-xlz/mayou"
+          >
+            px
+          </a>
         </span>{" "}
-        &{" "}
-        <span className="text-clr-prmry">
-          <a href="#">harri</a>
-        </span>
       </span>
     </footer>
   );
