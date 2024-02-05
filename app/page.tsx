@@ -1,16 +1,32 @@
+"use client";
+
 import { Button, Footer, Lens, Navbar, NerdAlert } from "./components";
+import { motion } from "framer-motion";
+import { useBlindCtx } from "@/utils/BlindContext";
+import { useState } from "react";
 
 export default function Home() {
+  const { isBlind, setIsBlind } = useBlindCtx();
+
   return (
-    <main className="grid h-full">
+    <motion.main
+      animate={isBlind ? "isBlind" : "isNotBlind"}
+      className="grid h-full"
+    >
       <Lens>
         <NerdAlert />
+        {/* <Button
+          onClick={() => setIsBlind((p) => !p)}
+          className="px-24"
+        >
+          Get Found
+        </Button> */}
       </Lens>
       <article className="col-span-full row-span-full flex flex-col h-full">
         <Navbar />
         <section className="text-small grow grid">
           <section className="col-span-full row-span-full text-[43.75rem] leading-[0] flex items-center justify-center overflow-hidden">
-            <p className="font-black text-clr-accent-300 text-stroke">404</p>
+            <p className="font-black text-clr-accent-800">404</p>
           </section>
           <article className="px-20 col-span-full row-span-full flex items-center justify-center">
             <span className="flex flex-col gap-[2.75rem]">
@@ -25,13 +41,13 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center gap-[.5rem]">
                 <span className="text-[0.625rem]">Be on your way now.</span>
-                <Button className="px-24 ">Get Found</Button>
+                <Button className="px-24">Get Found</Button>
               </div>
             </span>
           </article>
         </section>
         <Footer />
       </article>
-    </main>
+    </motion.main>
   );
 }

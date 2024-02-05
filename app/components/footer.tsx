@@ -1,7 +1,13 @@
+import { useBlindCtx } from "@/utils/BlindContext";
+
 const Footer = () => {
+  const { setIsBlind } = useBlindCtx();
   return (
-    <footer className="text-clr-scndry flex justify-between px-20 py-3 border-t border-t-clr-accent-400">
-      <button className="text-[0.625rem] hover:text-clr-prmry transition">
+    <footer className="text-clr-scndry flex justify-between items-center px-20 py-3 border-t border-t-clr-accent-400">
+      <button
+        onClick={() => setIsBlind(true)}
+        className="text-[0.625rem] hover:text-clr-prmry transition"
+      >
         Remove Lens
       </button>
       <span className="text-[0.75rem] font-cursive">

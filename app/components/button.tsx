@@ -6,7 +6,7 @@ type IProps = PropsWithChildren &
     variant?: boolean;
   };
 
-const Button = ({ children, variant, className }: IProps) => {
+const Button = ({ children, variant, className, onClick, ...rest }: IProps) => {
   return (
     <button
       className={cn(
@@ -17,6 +17,8 @@ const Button = ({ children, variant, className }: IProps) => {
             variant,
         }
       )}
+      onClick={onClick}
+      {...rest}
     >
       {children}
     </button>

@@ -11,3 +11,18 @@ body {
 .text-stroke {
   -webkit-text-stroke: 1px rgba(37, 37, 37, 1);
 }
+
+.lens {
+  backdrop-filter: blur(0);
+  visibility: hidden;
+  opacity: 0;
+  /* transition: visibility 1s linear, opacity 1s linear; */
+  /* transition-delay: 500ms; */
+  transition: all ease-in-out 500ms;
+}
+
+.lens.visible {
+  visibility: visible;
+  opacity: 1;
+  backdrop-filter: blur(16px);
+}

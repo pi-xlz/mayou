@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Satisfy } from "next/font/google";
 import localfont from "next/font/local";
 import "./globals.css";
+import BlindContextProvider from "@/utils/BlindContext";
 
 const satisfy = Satisfy({
   weight: "400",
@@ -33,7 +34,7 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} ${satisfy.variable} bg-base font-sans text-clr-prmry`}
       >
-        {children}
+        <BlindContextProvider>{children}</BlindContextProvider>
       </body>
     </html>
   );
