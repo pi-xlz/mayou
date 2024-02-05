@@ -23,7 +23,7 @@ type ProviderProps = PropsWithChildren;
 const BlindContextProvider = ({ children }: ProviderProps) => {
   const [isBlind, setIsBlind] = useState(true);
   const [nerdTips, setNerdTips] = useState(
-    "Looks like we've got another nerd...."
+    "Looks like we've got another nerd on our hands \u{1F440}...."
   );
 
   return (

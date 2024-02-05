@@ -3,10 +3,9 @@ import { Button } from ".";
 import { motion } from "framer-motion";
 import { nerdAlertVariants } from "@/utils/animation";
 import { useBlindCtx } from "@/utils/BlindContext";
-import { useRouter } from "next/navigation";
 
 const nerdAdvice = [
-  "Looks like we've got another nerd....",
+  "Go home!!....",
   "Hmmm...Touch grass?",
   "Uhhh, what are you doing?",
   "That's it you're outta here.....",
@@ -14,7 +13,6 @@ const nerdAdvice = [
 
 const NerdAlert = () => {
   const { setIsBlind, nerdTips } = useBlindCtx();
-  const router = useRouter();
 
   return (
     <motion.div
